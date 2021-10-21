@@ -37,3 +37,19 @@ Operações realizadas pela pessoa recrutadora.
 | Lista todas as vagas | `GET` | `/jobs/list-all-jobs` |
 
 Caso a pessoa utilize o _software_ Insomnia, ela pode utilizar [esse arquivo](/insomnia.json) para importar as requisições já montadas e definidas.
+
+## Instalação
+
+Siga esses passos para ter a API configurada e executando em sua máquina local:
+
+1. Instalação de dependências
+
+```
+npm ci
+```
+
+2. Execução do projeto
+
+```
+npm start
+```
