@@ -1,4 +1,4 @@
 export enum JobStatusEnum {
   DRAFT = 'draft',
-  PUBLISHED = 'published'
+  PUBLISHED = 'published',
 }

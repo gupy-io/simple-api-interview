@@ -1,9 +1,8 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { JobStatusEnum } from "./job.enums";
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { JobStatusEnum } from './job.enums';
 
-@Entity("jobs")
+@Entity('jobs')
 export class JobEntity {
- 
   @PrimaryGeneratedColumn()
   id: number;
 

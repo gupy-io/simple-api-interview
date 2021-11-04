@@ -9,7 +9,7 @@ export class AccountDTO {
   @IsNotEmpty()
   @Length(3, 120)
   name: string;
-  
+
   @IsString()
   @IsNotEmpty()
   @Length(8)

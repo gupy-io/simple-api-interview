@@ -7,7 +7,8 @@ import { AccountEntity } from './account.entity';
 @Injectable()
 export class AccountService {
   constructor(
-    @InjectRepository(AccountEntity) private repository: Repository<AccountEntity>,
+    @InjectRepository(AccountEntity)
+    private repository: Repository<AccountEntity>,
   ) {}
 
   public async create(newAccount: Account): Promise<Account> {
@@ -18,7 +19,7 @@ export class AccountService {
     return new Account(await this.repository.findOne({ email }));
   }
 
-  public async findOneById(id: number): Promise<Account|null> {
+  public async findOneById(id: number): Promise<Account | null> {
     const account = await this.repository.findOne({ id });
 
     if (account) {
