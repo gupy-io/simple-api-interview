@@ -16,7 +16,13 @@ export class AccountService {
   }
 
   public async findOneByEmail(email: string): Promise<Account> {
-    return new Account(await this.repository.findOne({ email }));
+    const account = await this.repository.findOne({ email });
+
+    if (account) {
+      return new Account(account);
+    }
+
+    return null;
   }
 
   public async findOneById(id: number): Promise<Account | null> {
