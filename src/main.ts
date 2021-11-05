@@ -19,6 +19,7 @@ async function bootstrap() {
   });
   app.useGlobalPipes(new ValidationPipe());
   app.useGlobalInterceptors(new TransformResponse());
+  app.setGlobalPrefix('api/v1');
 
   await app.listen(8080);
 }
