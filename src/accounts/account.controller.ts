@@ -14,7 +14,7 @@ export class AccountController {
     const accountExisted = await this.service.findOneByEmail(body.email);
 
     if (accountExisted) {
-      throw new BadRequestException(null, `Email ${body.email} already in use`);
+      return accountExisted;
     }
 
     return this.service.create(new Account(body));
